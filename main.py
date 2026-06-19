@@ -20,8 +20,10 @@ app = FastAPI(
 # ── CORS — allow frontend to talk to backend ──────────
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[        # VS Code Live Server alternative
-        "https://note-app-psi-jade.vercel.app/",  # ← replace with YOUR Vercel URL
+    allow_origins=[
+        "https://note-app-psi-jade.vercel.app",
+        "http://localhost:5500",
+        "http://127.0.0.1:5500",
     ],
     allow_credentials=True,
     allow_methods=["*"],
